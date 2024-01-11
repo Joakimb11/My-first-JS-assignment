@@ -17,18 +17,27 @@ using one of the methods I showed in the first lecture.
 <-- Locate the index.html file in the file browser and link it to this file, 
 javascript.js
 ******************************************************************************/
+console.log("Its alive!");
 
 /****************************************************************************** 
 ASSIGNMENT 2
 
-Last lecture I showed you how to make variables that can hold values of the 
+Last lecture I showed you how to make variablesma that can hold values of the 
 various data types. Make some variables of the following datatypes: 
 String, number, boolean, array
 You can choose what the actual content is.
 Try to use both the let and const keywords
 ******************************************************************************/
 
-//your code here
+let mystring = "hello, world!";
+let mynumber = 10;
+let istrue = true;
+let myarray = [1, 2, 3, 4, 5];
+
+const constantstring = "I am constant!";
+const constantnumber = 7.5;
+const isfalse = false;
+const constantarray = ["horse", "dog", "cow"];
 
 /****************************************************************************** 
 ASSIGNMENT 3
@@ -37,7 +46,15 @@ Try out a few of the operators we looked at (+, -, /, *)
 as well as a few of the shorthand operators (++, --, +=, -=)
 ******************************************************************************/
 
-//your code here
+let sum = mynumber + 5;
+let minus = mynumber - 1;
+let deling = mynumber / 2;
+let multiplication = mynumber * 5;
+
+mynumber++;
+mynumber += 10;
+mynumber--;
+mynumber -= 5;
 
 /****************************************************************************** 
 ASSIGNMENT 4
@@ -57,13 +74,42 @@ Try changing the values of the variables to make sure your IF/ELSE conditional
 can handle all cases correctly 
 ******************************************************************************/
 
-let userName = "";
+let userName = "Hello123";
 let userAge = 18;
 let userIsLoggedIn = false;
 let userIsBlocked = false;
-let goToPage = "";
+let goToPage = "/home";
 
-//your code here
+// The long way:
+// if (userName !== "") {
+//   console.log("username is not empty");
+// } else {
+//   console.log("username is empty");
+// }
+// if (userAge >= 18) {
+//   console.log("user is 18 or older");
+// } else {
+//   console.log("user is under 18");
+// }
+// if (!userIsBlocked) {
+//   console.log("user is not blocked.");
+// } else {
+//   console.log("Error: User is userIsBlocked!");
+// }
+
+if (userName !== "" && userAge >= 18 && !userIsBlocked) {
+  console.log("User can access");
+} else {
+  console.log("User can not access");
+}
+
+if (userName !== "" && userAge >= 18 && !userIsBlocked) {
+  userIsLoggedIn = true;
+  GoToPage = "";
+  console.log("Welcome to us, You are now logged in!");
+} else {
+  console.log("Error: Can not login");
+}
 
 /******************************************************************************
 ASSIGNMENT 5
@@ -80,4 +126,5 @@ to see that your conditional is working.
 
 const userMale = false;
 
-//your code here
+const userTitle = userMale ? "Mr." : "Mrs";
+console.log(userTitle);
